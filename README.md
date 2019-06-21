@@ -1,7 +1,17 @@
 # ZeroSecretRoom
-## A working Html5 chatroom implementation with end-to-end encryption.
+## A out-of-the-box working Html5 group chat (server-side code included) implementation with end-to-end encryption.
 
-中文版本在后面
+### Prerequisites
+
+    To fully use this chatroom you need to understand the general idea of how to buy/operate/install software on general linux server on the cloud. 
+    
+### Need a domain name? ssl certificate?
+    
+    It's not necessary but without a domain name and/or a ssl certficate, you and your friend had to accept the usual pop-up from the browser saying the self-signed certificate is not safe. Other than that, no real danger or difference bewteen using a real thing vs self-signed ones.
+    Why can't we support http instead of https?
+    A: The real reason is that the encryption lib we used is called WebCrypto, it is an international standard which has been acccepted by ALL major browser maker including Google Chrome, Apple Safari and even Microsoft Edge. It only operates with https and for http it can only work under http://localhost/xxx  so that's the root cause. 
+    Webcrypto stuff...
+    https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API
 
 ### Installation
 
@@ -47,6 +57,8 @@ https://youtu.be/f1aJCYCM8LE
 ### Security concerns
 - The default room rid=aaa is not secure and it can only be used in a demo situation because the AESkey is fixed (this is by design, room aaa is used in unit test). for real security room please create a new room from the menu and invite people in that room.
 
+视频简介
+https://youtu.be/f1aJCYCM8LE
 
 闪亮的功能点
 
